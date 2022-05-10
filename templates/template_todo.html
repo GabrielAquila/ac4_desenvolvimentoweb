@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Seja bem vindo a consulta que coloca na sua lista!! </h1>
+    <ul>
+        {% for item in msgs %}
+            <li>{{item}}</li> 
+        {% endfor%}
+    </ul>
+    <form action = "/todo/{{instituicao}}/{{nome_sala}}" method="POST">
+        <label for="item">Nova item:</label>
+        <input type="text" id="item" name="item">
+        <input type="submit" value="enviar">
+    </form>
+    
+</body>
+</html>
